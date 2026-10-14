@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Availability search</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <p class="eyebrow">B2C web tools</p>
+        <h1>Availability search</h1>
+        <p class="intro">Search room availability and inspect the response from the PRE Directa service.</p>
+      </header>
+
+      <section class="card">
+        <form id="availability-form">
+          <div class="section-heading">
+            <div>
+              <h2>Search criteria</h2>
+              <p>Enter the dates and occupancy to send to the availability API.</p>
+            </div>
+            <span id="status-badge" class="status-badge" data-state="idle">Ready</span>
+          </div>
+
+          <div class="form-grid">
+            <label>Arrival date
+              <span class="date-field">
+                <input id="arrival-date" name="arrivalDate" type="text" inputmode="numeric" placeholder="dd/MM/yy" pattern="\d{2}/\d{2}/\d{2}" maxlength="8" autocomplete="off" required />
+                <button class="calendar-button" type="button" data-date-picker="arrival-picker" aria-label="Choose arrival date">&#128197;</button>
+                <input id="arrival-picker" class="date-picker" type="date" tabindex="-1" aria-hidden="true" />
+              </span>
+            </label>
+            <label>Departure date
+              <span class="date-field">
+                <input id="departure-date" name="departureDate" type="text" inputmode="numeric" placeholder="dd/MM/yy" pattern="\d{2}/\d{2}/\d{2}" maxlength="8" autocomplete="off" required />
+                <button class="calendar-button" type="button" data-date-picker="departure-picker" aria-label="Choose departure date">&#128197;</button>
+                <input id="departure-picker" class="date-picker" type="date" tabindex="-1" aria-hidden="true" />
+              </span>
+            </label>
+            <label>Adults <input id="adults" name="adults" type="number" min="1" max="20" value="2" required /></label>
+            <label>Country code <input id="country-code" name="countryCode" type="text" maxlength="2" value="ES" required /></label>
+            <label for="hotel-select">Hotel
+              <select id="hotel-select" name="hotelId" required disabled>
+                <option value="">Loading hotels...</option>
+              </select>
+            </label>
+            <label>Promo code <input id="promo-code" name="promoCode" type="text" value="1" /></label>
+          </div>
+
+          <div class="api-selection">
+            <label for="api-name">API name
+              <select id="api-name" name="apiName" required></select>
+            </label>
+            <p class="api-url-label">URL</p>
+            <code id="api-url" class="api-url"></code>
+            <input id="api-endpoint" name="apiEndpoint" type="hidden" />
+          </div>
+
+          <button id="search-button" type="submit">Search availability</button>
+        </form>
+      </section>
+
+      <section class="card response-card">
+        <div class="section-heading">
+          <div>
+            <h2>API response</h2>
+            <p id="response-summary">The response will appear here after a search.</p>
+          </div>
+          <button id="copy-button" class="secondary-button" type="button" disabled>Copy response JSON</button>
+        </div>
+        <pre id="response-output" class="response-output" aria-live="polite"><code>Waiting for a request...</code></pre>
+        <div class="request-preview">
+          <h3>Request body</h3>
+          <pre id="request-output" class="response-output"><code>No request sent yet.</code></pre>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

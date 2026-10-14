@@ -1,0 +1,14 @@
+{
+  "1": {
+    "url": "https://pre-gisapim.iberostar.com/mule/ae/availability/search",
+    "name": "Busqueda de disponibilidad  (GIS)"
+  },
+  "2": {
+    "url": "https://ibhbegprefuncwinsearch.azurewebsites.net/api/availability/search",
+    "name": "Busqueda de disponibilidad (not GIS)"
+  },
+  "3": {
+    "url": "https://ibhbegprefuncwinsearch.azurewebsites.net/api/price-from",
+    "name": "Precios desde (not GIS)"
+  }
+}

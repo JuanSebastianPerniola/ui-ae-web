@@ -1,0 +1,65 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261013104637
+Nombre de usuario: IBEROSTARW2K\mindata.jperniola
+Usuario RunAs: IBEROSTARW2K\mindata.jperniola
+Nombre de la configuración: 
+Máquina: LTCEN407 (Microsoft Windows NT 10.0.26100.0)
+Aplicación host: powershell.exe -NoProfile -NoLogo -Command & 'c:\Users\mindata.jperniola\AppData\Local\Programs\Microsoft VS Code\2a59476c9b\resources\app\node_modules.asar.unpacked\@github\copilot-sdk-win32-x64\ripgrep\bin\win32-x64\rg.exe' '-n' '--hidden' '--glob' '!**/.git' '--with-filename' '--' 'api-name|api-url|apiEndpoints' 'C:\Users\mindata.jperniola\Desktop\ui web'
+Id. de proceso: 17544
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PS>& 'c:\Users\mindata.jperniola\AppData\Local\Programs\Microsoft VS Code\2a59476c9b\resources\app\node_modules.asar.unpacked\@github\copilot-sdk-win32-x64\ripgrep\bin\win32-x64\rg.exe' '-n' '--hidden' '--glob' '!**/.git' '--with-filename' '--' 'api-name|api-url|apiEndpoints' 'C:\Users\mindata.jperniola\Desktop\ui web'
+>> ErrorTerminación(): "No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'."
+**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261013104637
+Nombre de usuario: IBEROSTARW2K\mindata.jperniola
+Usuario RunAs: IBEROSTARW2K\mindata.jperniola
+Nombre de la configuración: 
+Máquina: LTCEN407 (Microsoft Windows NT 10.0.26100.0)
+Aplicación host: powershell.exe -NoProfile -NoLogo -Command & 'c:\Users\mindata.jperniola\AppData\Local\Programs\Microsoft VS Code\2a59476c9b\resources\app\node_modules.asar.unpacked\@github\copilot-sdk-win32-x64\ripgrep\bin\win32-x64\rg.exe' '-n' '--hidden' '--glob' '!**/.git' '--with-filename' '--' 'api-name|api-url|apiEndpoints' 'C:\Users\mindata.jperniola\Desktop\ui web'
+Id. de proceso: 17544
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PS>CommandInvocation(Out-String): "Out-String"
+>> EnlaceDeParámetros(Out-String): nombre="InputObject"; valor="No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'."
+No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'.
+En línea: 1 Carácter: 1
++ & 'c:\Users\mindata.jperniola\AppData\Local\Programs\Microsoft VS Cod ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Microsoft.PowerShell.Core\FileSystem:String) [], DriveNotFoundException
+    + FullyQualifiedErrorId : DriveNotFound
+No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'.
+En línea: 1 Carácter: 1
++ & 'c:\Users\mindata.jperniola\AppData\Local\Programs\Microsoft VS Cod ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Microsoft.PowerShell.Core\FileSystem:String) [], DriveNotFoundException
+    + FullyQualifiedErrorId : DriveNotFound
+No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'.
+En línea: 1 Carácter: 1
++ & 'c:\Users\mindata.jperniola\AppData\Local\Programs\Microsoft VS Cod ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Microsoft.PowerShell.Core\FileSystem:String) [], DriveNotFoundException
+    + FullyQualifiedErrorId : DriveNotFound
+
+PS>$global:?
+False
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261013104638
+**********************

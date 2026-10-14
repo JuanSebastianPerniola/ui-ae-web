@@ -1,0 +1,172 @@
+[
+  {
+    "destino": "MALLORCA",
+    "hoteles": [
+      { "codigo": "ABA", "categoria": "4*", "nombre": "Selection Albufera Park", "id": "05" },
+      { "codigo": "ABH", "categoria": "4*", "nombre": "Selection Albufera Playa", "id": "06" },
+      { "codigo": "ALC", "categoria": "4*", "nombre": "Waves Alcudia Park", "id": "02" },
+      { "codigo": "BLA", "categoria": "4*", "nombre": "Waves Ciudad Blanca", "id": "01" },
+      { "codigo": "MUR", "categoria": "4*", "nombre": "Waves Playa de Muro", "id": "03" },
+      { "codigo": "CAM", "categoria": "4*SUP", "nombre": "Waves Cala Millor", "id": 172 },
+      { "codigo": "PIN", "categoria": "4*", "nombre": "Waves Pinos Park", "id": "07" },
+      { "codigo": "CDM", "categoria": "4*", "nombre": "Waves Cala Domingos", "id": 180 },
+      { "codigo": "PMV", "categoria": "5*", "nombre": "Selection Playa de Muro Village", "id": "04" },
+      { "codigo": "BAR", "categoria": "4*", "nombre": "Waves Club Cala Barca", "id": 10 },
+      { "codigo": "CRI", "categoria": "4*", "nombre": "Waves Cristina", "id": 14 },
+      { "codigo": "BHP", "categoria": "4*", "nombre": "Waves Bahia de Palma", "id": 15 },
+      { "codigo": "PDP", "categoria": null, "nombre": "Selection Playa de Palma", "id": 16 },
+      { "codigo": "JAR", "categoria": null, "nombre": "Selection Jardín del Sol Suites", "id": 36 },
+      { "codigo": "LLT", "categoria": null, "nombre": "Selection Llaut Palace", "id": 311 },
+      { "codigo": "EST", "categoria": "5*", "nombre": "Selection Es Trenc", "id": 346 }
+    ]
+  },
+  {
+    "destino": "REPUBLICA DOMINICANA",
+    "hoteles": [
+      { "codigo": "BAV", "categoria": null, "nombre": "Selection Bavaro Suites", "id": 61 },
+      { "codigo": "DOR", "categoria": null, "nombre": "Waves Costa Dorada", "id": 62 },
+      { "codigo": "DOM", "categoria": null, "nombre": "Waves Dominicana", "id": 63 },
+      { "codigo": "HAC", "categoria": null, "nombre": "Selection Hacienda Dominicus", "id": 73 },
+      { "codigo": "PCA", "categoria": null, "nombre": "Waves Punta Cana", "id": 64 },
+      { "codigo": "GHB", "categoria": null, "nombre": "JOIA Bavaro by Iberostar", "id": 135 },
+      { "codigo": "BSP", "categoria": null, "nombre": "Selection Coral Bavaro", "id": 315 }
+    ]
+  },
+  {
+    "destino": "MEXICO",
+    "hoteles": [
+      { "codigo": "PMY", "categoria": null, "nombre": "Selection Paraiso Maya", "id": 76 },
+      { "codigo": "PLI", "categoria": null, "nombre": "Selection Paraiso Lindo", "id": 78 },
+      { "codigo": "PMA", "categoria": null, "nombre": "Paraiso del Mar", "id": 71 },
+      { "codigo": "PBE", "categoria": null, "nombre": "Paraiso Beach", "id": 72 },
+      { "codigo": "TUC", "categoria": null, "nombre": "Tucan", "id": 70 },
+      { "codigo": "QTZ", "categoria": null, "nombre": "Quetzal", "id": 69 },
+      { "codigo": "COZ", "categoria": null, "nombre": "Cozumel", "id": 68 },
+      { "codigo": "CUN", "categoria": null, "nombre": "Selection Cancun", "id": 160 },
+      { "codigo": "GHP", "categoria": null, "nombre": "JOIA Paraiso by Iberostar", "id": 117 },
+      { "codigo": "MIT", "categoria": null, "nombre": "Selection Playa Mita", "id": 138 },
+      { "codigo": "TCU", "categoria": null, "nombre": "Coral Level at Selection Cancún", "id": 294 },
+      { "codigo": "RIC", "categoria": null, "nombre": "Selection Riviera Cancún", "id": 353 }
+    ]
+  },
+  {
+    "destino": "JAMAICA",
+    "hoteles": [
+      { "codigo": "ROA", "categoria": null, "nombre": "Selection Rose Hall Suites", "id": 132 },
+      { "codigo": "ROH", "categoria": null, "nombre": "Rose Hall Beach", "id": 118 },
+      { "codigo": "GHR", "categoria": null, "nombre": "JOIA Rose Hall by Iberostar", "id": 134 }
+    ]
+  },
+  {
+    "destino": "BRASIL",
+    "hoteles": [
+      { "codigo": "BAH", "categoria": null, "nombre": "Bahia", "id": 109 },
+      { "codigo": "PRA", "categoria": null, "nombre": "Selection Praia do Forte", "id": 137 },
+      { "codigo": "AMA", "categoria": null, "nombre": "Heritage Grand Amazon", "id": 32 }
+    ]
+  },
+  {
+    "destino": "ANDALUCIA",
+    "hoteles": [
+      { "codigo": "XAN", "categoria": null, "nombre": "Waves Royal Andalus", "id": 18 },
+      { "codigo": "ANP", "categoria": "5*", "nombre": "Selection Andalucia Playa", "id": 22 },
+      { "codigo": "MAB", "categoria": null, "nombre": "Selection Marbella Coral Beach", "id": 155 },
+      { "codigo": "MAP", "categoria": null, "nombre": "Waves Malaga Playa", "id": 156 }
+    ]
+  },
+  {
+    "destino": "CANARIAS",
+    "hoteles": [
+      { "codigo": "DAL", "categoria": null, "nombre": "Waves Las Dalias", "id": 27 },
+      { "codigo": "BOU", "categoria": "4*", "nombre": "Waves Bouganville", "id": 26 },
+      { "codigo": "SAB", "categoria": "5*", "nombre": "Selection Sabila (antes Torviscas Playa)", "id": 25 },
+      { "codigo": "ANT", "categoria": "5*", "nombre": "Selection Anthelia", "id": 24 },
+      { "codigo": "MCY", "categoria": null, "nombre": "Heritage Grand Hotel Mencey", "id": 42 },
+      { "codigo": "MIR", "categoria": null, "nombre": "JOIA el Mirador by Iberostar", "id": 41 },
+      { "codigo": "BOV", "categoria": "4*", "nombre": "La Bocayna Village", "id": 136 },
+      { "codigo": "LAN", "categoria": null, "nombre": "Selection Lanzarote Park", "id": 12 },
+      { "codigo": "GAV", "categoria": null, "nombre": "Waves Playa Gaviotas", "id": 21 },
+      { "codigo": "XFU", "categoria": null, "nombre": "Selection Palace Fuerteventura", "id": 19 },
+      { "codigo": "FUA", "categoria": "4*", "nombre": "Waves Gaviotas Park", "id": 39 },
+      { "codigo": "OOL", "categoria": null, "nombre": "Olé Olivia Lanzarote", "id": 169 },
+      { "codigo": "SLM", "categoria": "5*", "nombre": "JOIA Salomé by Iberostar", "id": 152 },
+      { "codigo": "OTT", "categoria": "4*", "nombre": "Olé Tropical Tenerife", "id": 168 }
+    ]
+  },
+  {
+    "destino": "IBIZA",
+    "hoteles": [
+      { "codigo": "SEU", "categoria": "4*", "nombre": "Selection Santa Eulaia", "id": 177 },
+      { "codigo": "PAV", "categoria": null, "nombre": "Playa Alameda", "id": null }
+    ]
+  },
+  {
+    "destino": "MARRUECOS",
+    "hoteles": [
+      { "codigo": "FOB", "categoria": "4*", "nombre": "Waves Founty Beach", "id": 95 },
+      { "codigo": "PMK", "categoria": "4*", "nombre": "Waves Club Palmeraie Marrakech", "id": 265 },
+      { "codigo": "SAI", "categoria": "5*", "nombre": "Waves Saidia", "id": 131 }
+    ]
+  },
+  {
+    "destino": "ZANZIBAR",
+    "hoteles": [
+      { "codigo": "ZAN", "categoria": "5*", "nombre": "Iberostar Selection Zanzibar", "id": 354 }
+    ]
+  },
+  {
+    "destino": "MIAMI",
+    "hoteles": [
+      { "codigo": "BRK", "categoria": "4*", "nombre": "Waves Berkeley Shore", "id": 275 },
+      { "codigo": "MIA", "categoria": "4*", "nombre": "Waves Miami Beach", "id": 349 }
+    ]
+  },
+  {
+    "destino": "ARUBA",
+    "hoteles": [
+      { "codigo": "ARB", "categoria": null, "nombre": "Joia Aruba by Iberostar", "id": 303 }
+    ]
+  },
+  {
+    "destino": "TUNEZ",
+    "hoteles": [
+      { "codigo": "AVE", "categoria": "4*", "nombre": "Waves Averroes", "id": 92 },
+      { "codigo": "DEA", "categoria": "5*", "nombre": "Selection Diar El Andalous", "id": 151 },
+      { "codigo": "REM", "categoria": "5*", "nombre": "Selection Royal El Mansour", "id": 150 },
+      { "codigo": "MEH", "categoria": "4*", "nombre": "Waves Mehari Djerba", "id": 120 },
+      { "codigo": "KAN", "categoria": "5*", "nombre": "Selection Kantaoui Bay", "id": 304 },
+      { "codigo": "KUR", "categoria": "5*", "nombre": "Selection Kuriat Palace", "id": 309 },
+      { "codigo": "EOL", "categoria": "5*", "nombre": "Selection Eolia Djerba", "id": 342 },
+      { "codigo": "MRG", "categoria": "5*", "nombre": "Selection Mirage Hammamet", "id": 350 }
+    ]
+  },
+  {
+    "destino": "GRECIA",
+    "hoteles": [
+      { "codigo": "PAN", "categoria": null, "nombre": "Waves Creta Panorama & Mare", "id": 88 },
+      { "codigo": "CMA", "categoria": "4*", "nombre": "Selection Creta Marine", "id": 87 }
+    ]
+  },
+  {
+    "destino": "BULGARIA",
+    "hoteles": [
+      { "codigo": "SBE", "categoria": "4*", "nombre": "Sunny Beach Resort", "id": 43 }
+    ]
+  },
+  {
+    "destino": "MONTENEGRO",
+    "hoteles": [
+      { "codigo": "BVE", "categoria": "4*", "nombre": "Waves Bellevue", "id": 104 },
+      { "codigo": "HEN", "categoria": "4*", "nombre": "Waves Herceg Novi", "id": 288 },
+      { "codigo": "SLA", "categoria": "4*", "nombre": "Waves Slavija", "id": 312 },
+      { "codigo": "MON", "categoria": "4*", "nombre": "Selection Montenegro", "id": 355 }
+    ]
+  },
+  {
+    "destino": "PORTUGAL",
+    "hoteles": [
+      { "codigo": "LIS", "categoria": "5*", "nombre": "Selection Lisboa", "id": 282 },
+      { "codigo": "ALG", "categoria": "5*", "nombre": "Selection Lagos Algarve", "id": 306 }
+    ]
+  }
+]

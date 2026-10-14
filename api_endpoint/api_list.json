@@ -1,0 +1,71 @@
+PRE - Directa, curl --location 'https://ibhbegprefuncwinsearch.azurewebsites.net/api/availability/search?code=EQ3srl8rjHDEmCQsX41o_xD47rkNAj6gxxy4OSmDZj7vAzFuTu3xyA%3D%3D' \
+--header 'Content-Type: application/json' \
+--data '{"rooms": [
+    {
+        "adults": "2"                  
+        
+    }
+],
+"channel": "b2c-web",
+"hotelId": "42",
+"partnerId": null,
+"promoCode": "1",
+"arrivalDate": "2027-05-24",
+"countryCode": "ES",
+"departureDate": "2027-05-27",
+"UseCache": true,
+"bypassRestrictions": {
+    "quota": false,
+    "minStay": false,
+    "release": false,
+    "occupancy": false,
+    "salesClose": false,
+    "rateRelease": false
+}
+}'
+
+
+PRE - Directa - Precios desde   curl --location 'https://ibhbegprefuncwinsearch.azurewebsites.net/api/price-from?code=EQ3srl8rjHDEmCQsX41o_xD47rkNAj6gxxy4OSmDZj7vAzFuTu3xyA%3D%3D' \
+--header 'Content-Type: application/json' \
+--data '{
+
+"channel": "b2c-web",
+"hotelId": "14",
+"countryCode": "ES",
+"UseCache": true
+/*"startDate": "2026-12-01",
+"endDate": "2026-12-06",
+"mealPlanId": 50*/
+}'
+
+
+PRE Akamai - curl --location 'https://pre-gisapim.iberostar.com/mule/ae/availability/search' \
+--header 'Content-Type: application/json' \
+--data '{
+  "channel": "b2c-web",
+  "hotelId": "36",
+  "arrivalDate": "2026-09-21",
+  "departureDate": "2026-09-23",
+  "rooms": [{
+            "adults": 2
+          /* "children": [
+              {"age": 5}
+            ] */
+        }
+    ],
+    
+  "IncludeBreakdown": true,
+  "UseCache": true,
+    "countryCode": "ES",  
+    "promoCode": "1",
+    "partnerId": null,
+    "bypassRestrictions":  {
+      "occupancy": false,      
+      "minStay": false,
+      "release": false,
+      "salesClose": false,
+      "quota": false,
+      "rateRelease": false
+    }
+  
+}'
