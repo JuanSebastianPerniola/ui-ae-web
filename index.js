@@ -6,18 +6,19 @@ const responseSummary = document.querySelector("#response-summary");
 const statusBadge = document.querySelector("#status-badge");
 const copyButton = document.querySelector("#copy-button");
 const hotelSelect = document.querySelector("#hotel-select");
-const embeddedFunctionCode = decodeURIComponent("EQ3srl8rjHDEmCQsX41o_xD47rkNAj6gxxy4OSmDZj7vAzFuTu3xyA%3D%3D");
 const apiEndpoints = [
   {
     url: "https://pre-gisapim.iberostar.com/mule/ae/availability/search",
     name: "Availability search (GIS)"
   },
   {
-    url: "https://ibhbegprefuncwinsearch.azurewebsites.net/api/availability/search",
+    url: "/api/availability-search",
+    displayUrl: "https://ibhbegprefuncwinsearch.azurewebsites.net/api/availability/search",
     name: "Availability search (not GIS)"
   },
   {
-    url: "https://ibhbegprefuncwinsearch.azurewebsites.net/api/price-from",
+    url: "/api/price-from",
+    displayUrl: "https://ibhbegprefuncwinsearch.azurewebsites.net/api/price-from",
     name: "Price from (not GIS)"
   }
 ];
@@ -43,7 +44,7 @@ function updateApiEndpoint() {
     return;
   }
   apiEndpoint.value = selectedApi.url;
-  apiUrl.textContent = selectedApi.url;
+  apiUrl.textContent = selectedApi.displayUrl || selectedApi.url;
 }
 
 apiName.addEventListener("change", updateApiEndpoint);
@@ -88,18 +89,33 @@ function setStatus(state, label) {
   statusBadge.textContent = label;
 }
 
-function getRequestBody() {
+function getRequestBody(endpoint) {
   const formData = new FormData(form);
   const hotel = hotels[Number(formData.get("hotelId"))];
+  const arrivalDate = toIsoDate(formData.get("arrivalDate"));
+  const departureDate = toIsoDate(formData.get("departureDate"));
+
+  if (endpoint === "/api/price-from") {
+    return {
+      channel: "b2c-web",
+      hotelId: hotel.id,
+      countryCode: String(formData.get("countryCode")).trim().toUpperCase(),
+      UseCache: true,
+      startDate: arrivalDate,
+      endDate: departureDate,
+      mealPlanId: 50
+    };
+  }
+
   return {
     rooms: [{ adults: formData.get("adults") }],
     channel: "b2c-web",
     hotelId: hotel.id,
     partnerId: null,
     promoCode: formData.get("promoCode") || null,
-    arrivalDate: toIsoDate(formData.get("arrivalDate")),
+    arrivalDate,
     countryCode: String(formData.get("countryCode")).trim().toUpperCase(),
-    departureDate: toIsoDate(formData.get("departureDate")),
+    departureDate,
     UseCache: true,
     bypassRestrictions: { quota: false, minStay: false, release: false, occupancy: false, salesClose: false, rateRelease: false }
   };
@@ -187,12 +203,9 @@ form.addEventListener("submit", async (event) => {
     return;
   }
 
-  const requestBody = getRequestBody();
+  const requestBody = getRequestBody(endpoint);
   showRequest(requestBody);
-  const url = new URL(endpoint);
-  if (url.hostname === "ibhbegprefuncwinsearch.azurewebsites.net") {
-    url.searchParams.set("code", embeddedFunctionCode);
-  }
+  const url = new URL(endpoint, window.location.origin);
   setStatus("loading", "Searching...");
   responseSummary.textContent = "Sending request to the availability service...";
   searchButton.disabled = true;

@@ -1,4 +1,4 @@
-PRE - Directa, curl --location 'https://ibhbegprefuncwinsearch.azurewebsites.net/api/availability/search?code=EQ3srl8rjHDEmCQsX41o_xD47rkNAj6gxxy4OSmDZj7vAzFuTu3xyA%3D%3D' \
+PRE - Directa, curl --location 'https://ibhbegprefuncwinsearch.azurewebsites.net/api/availability/search?code=<AZURE_FUNCTION_CODE>' \
 --header 'Content-Type: application/json' \
 --data '{"rooms": [
     {
@@ -25,7 +25,7 @@ PRE - Directa, curl --location 'https://ibhbegprefuncwinsearch.azurewebsites.net
 }'
 
 
-PRE - Directa - Precios desde   curl --location 'https://ibhbegprefuncwinsearch.azurewebsites.net/api/price-from?code=EQ3srl8rjHDEmCQsX41o_xD47rkNAj6gxxy4OSmDZj7vAzFuTu3xyA%3D%3D' \
+PRE - Directa - Precios desde   curl --location 'https://ibhbegprefuncwinsearch.azurewebsites.net/api/price-from?code=<AZURE_FUNCTION_CODE>' \
 --header 'Content-Type: application/json' \
 --data '{
 

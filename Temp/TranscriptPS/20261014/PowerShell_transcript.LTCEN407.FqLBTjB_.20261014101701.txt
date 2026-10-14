@@ -1,0 +1,65 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261014101702
+Nombre de usuario: IBEROSTARW2K\mindata.jperniola
+Usuario RunAs: IBEROSTARW2K\mindata.jperniola
+Nombre de la configuración: 
+Máquina: LTCEN407 (Microsoft Windows NT 10.0.26100.0)
+Aplicación host: powershell.exe -NoProfile -NoLogo -Command & 'rg' '-n' '--max-count' '200' '--hidden' '--glob' '!**/.git' '--with-filename' '--' 'mealPlan|startDate|endDate|arrivalDate|api-name' 'C:\Users\mindata.jperniola\Desktop\ui-ae-web'
+Id. de proceso: 13968
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PS>& 'rg' '-n' '--max-count' '200' '--hidden' '--glob' '!**/.git' '--with-filename' '--' 'mealPlan|startDate|endDate|arrivalDate|api-name' 'C:\Users\mindata.jperniola\Desktop\ui-ae-web'
+>> ErrorTerminación(): "No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'."
+**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261014101702
+Nombre de usuario: IBEROSTARW2K\mindata.jperniola
+Usuario RunAs: IBEROSTARW2K\mindata.jperniola
+Nombre de la configuración: 
+Máquina: LTCEN407 (Microsoft Windows NT 10.0.26100.0)
+Aplicación host: powershell.exe -NoProfile -NoLogo -Command & 'rg' '-n' '--max-count' '200' '--hidden' '--glob' '!**/.git' '--with-filename' '--' 'mealPlan|startDate|endDate|arrivalDate|api-name' 'C:\Users\mindata.jperniola\Desktop\ui-ae-web'
+Id. de proceso: 13968
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PS>CommandInvocation(Out-String): "Out-String"
+>> EnlaceDeParámetros(Out-String): nombre="InputObject"; valor="No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'."
+No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'.
+En línea: 1 Carácter: 1
++ & 'rg' '-n' '--max-count' '200' '--hidden' '--glob' '!**/.git' '--wit ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Microsoft.PowerShell.Core\FileSystem:String) [], DriveNotFoundException
+    + FullyQualifiedErrorId : DriveNotFound
+No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'.
+En línea: 1 Carácter: 1
++ & 'rg' '-n' '--max-count' '200' '--hidden' '--glob' '!**/.git' '--wit ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Microsoft.PowerShell.Core\FileSystem:String) [], DriveNotFoundException
+    + FullyQualifiedErrorId : DriveNotFound
+No se encuentra la unidad. No existe ninguna unidad con el nombre 'Microsoft.PowerShell.Core\FileSystem'.
+En línea: 1 Carácter: 1
++ & 'rg' '-n' '--max-count' '200' '--hidden' '--glob' '!**/.git' '--wit ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Microsoft.PowerShell.Core\FileSystem:String) [], DriveNotFoundException
+    + FullyQualifiedErrorId : DriveNotFound
+
+PS>$global:?
+False
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261014101704
+**********************
