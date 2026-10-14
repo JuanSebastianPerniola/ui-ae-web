@@ -8,7 +8,7 @@
     "name": "Busqueda de disponibilidad (not GIS)"
   },
   "3": {
-    "url": "https://ibhbegprefuncwinsearch.azurewebsites.net/api/price-from",
-    "name": "Precios desde (not GIS)"
+    "url": "https://pre-gisapim.iberostar.com/mule/ae/price-from",
+    "name": "Precios desde (GIS)"
   }
 }

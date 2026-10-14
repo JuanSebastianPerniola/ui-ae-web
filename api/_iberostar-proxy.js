@@ -11,6 +11,17 @@ function sendJson(response, status, value) {
   response.end(JSON.stringify(value));
 }
 
+function getFunctionCode() {
+  const configuredCode = process.env.IBEROSTAR_FUNCTION_CODE;
+  if (!configuredCode) return null;
+
+  try {
+    return decodeURIComponent(configuredCode.trim());
+  } catch {
+    return configuredCode.trim();
+  }
+}
+
 async function proxyIberostarRequest(request, response, path) {
   setCorsHeaders(response);
 
@@ -25,7 +36,7 @@ async function proxyIberostarRequest(request, response, path) {
     return;
   }
 
-  const functionCode = process.env.IBEROSTAR_FUNCTION_CODE;
+  const functionCode = getFunctionCode();
   if (!functionCode) {
     sendJson(response, 500, { error: "IBEROSTAR_FUNCTION_CODE is not configured" });
     return;

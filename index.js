@@ -17,17 +17,72 @@ const apiEndpoints = [
     name: "Availability search (not GIS)"
   },
   {
-    url: "/api/price-from",
-    displayUrl: "https://ibhbegprefuncwinsearch.azurewebsites.net/api/price-from",
-    name: "Price from (not GIS)"
+    url: "https://pre-gisapim.iberostar.com/mule/ae/price-from",
+    name: "Price from (GIS)"
   }
 ];
 let lastResponseText = "";
 let hotels = [];
+const failedCalls = [
+  {
+    name: "Price from date (not GIS)",
+    method: "POST",
+    url: "https://ibhbegprefuncwinsearch.azurewebsites.net/api/price-from",
+    symptom: "The Vercel request with startDate and endDate returns HTTP 403 with an Azure App Service \"Web App - Unavailable\" page.",
+    reason: "The equivalent direct curl works from the local machine, but the request forwarded by Vercel is blocked by Azure before the function processes the date-based request. Azure access restrictions or network policy must allow the proxy's outbound traffic."
+  }
+];
 
 const apiName = document.querySelector("#api-name");
 const apiUrl = document.querySelector("#api-url");
 const apiEndpoint = document.querySelector("#api-endpoint");
+const failedCallsList = document.querySelector("#failed-calls-list");
+
+function renderFailedCalls() {
+  failedCallsList.replaceChildren(...failedCalls.map((call) => {
+    const article = document.createElement("article");
+    article.className = "failed-call";
+    article.innerHTML = `
+      <div class="failed-call-heading">
+        <h3></h3>
+        <span class="status-badge" data-state="error">Not working</span>
+      </div>
+      <p class="failed-call-url"></p>
+      <dl>
+        <dt>Request</dt>
+        <dd></dd>
+        <dt>Observed problem</dt>
+        <dd></dd>
+        <dt>Reason</dt>
+        <dd></dd>
+      </dl>
+    `;
+    article.querySelector("h3").textContent = call.name;
+    article.querySelector(".failed-call-url").textContent = call.url;
+    const details = article.querySelectorAll("dd");
+    details[0].textContent = call.method;
+    details[1].textContent = call.symptom;
+    details[2].textContent = call.reason;
+    return article;
+  }));
+}
+
+document.querySelectorAll(".tab-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedTab = button.dataset.tab;
+    document.querySelectorAll(".tab-button").forEach((tabButton) => {
+      const isSelected = tabButton === button;
+      tabButton.classList.toggle("is-active", isSelected);
+      tabButton.setAttribute("aria-selected", String(isSelected));
+    });
+    document.querySelectorAll(".tab-panel").forEach((panel) => {
+      panel.classList.toggle("is-active", panel.id === selectedTab);
+      panel.hidden = panel.id !== selectedTab;
+    });
+  });
+});
+
+renderFailedCalls();
 
 apiEndpoints.forEach(({ name }) => {
   const option = document.createElement("option");
@@ -95,12 +150,11 @@ function getRequestBody(endpoint) {
   const arrivalDate = toIsoDate(formData.get("arrivalDate"));
   const departureDate = toIsoDate(formData.get("departureDate"));
 
-  if (endpoint === "/api/price-from") {
+  if (endpoint === "https://pre-gisapim.iberostar.com/mule/ae/price-from") {
     return {
       channel: "b2c-web",
       hotelId: hotel.id,
       countryCode: String(formData.get("countryCode")).trim().toUpperCase(),
-      UseCache: true,
       startDate: arrivalDate,
       endDate: departureDate,
       mealPlanId: 50

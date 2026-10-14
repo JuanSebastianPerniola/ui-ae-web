@@ -15,6 +15,11 @@ h1 { margin-bottom: 10px; font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -
 h2 { margin-bottom: 6px; font-size: 1.15rem; }
 .intro, .section-heading p, .help-text { margin-bottom: 0; color: #667085; line-height: 1.55; }
 .card { margin-bottom: 20px; padding: clamp(20px, 4vw, 32px); border: 1px solid #e1e6ef; border-radius: 18px; background: #fff; box-shadow: 0 12px 32px rgb(29 43 76 / 7%); }
+.tabs { display: flex; gap: 8px; margin-bottom: 20px; padding: 5px; border-radius: 12px; background: #e1e6ef; }
+.tab-button { min-height: 40px; flex: 1; background: transparent; color: #667085; }
+.tab-button:hover:not(:disabled) { background: #f5f7fb; color: #344054; }
+.tab-button.is-active { background: #fff; color: #3852c4; box-shadow: 0 2px 8px rgb(29 43 76 / 10%); }
+.tab-panel[hidden] { display: none; }
 .section-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
 .status-badge { flex: 0 0 auto; padding: 6px 11px; border-radius: 999px; background: #edf0f5; color: #667085; font-size: .8rem; font-weight: 700; }
 .status-badge[data-state="loading"] { background: #fff4d6; color: #946200; }
@@ -43,8 +48,19 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .request-preview { margin-top: 24px; padding-top: 24px; border-top: 1px solid #e8ebf1; }
 .request-preview h3 { margin: 0 0 10px; color: #344054; font-size: .95rem; }
 .request-preview .response-output { min-height: 120px; max-height: 360px; }
+.failed-calls-list { display: grid; gap: 16px; }
+.failed-call { padding: 20px; border: 1px solid #f3d0cd; border-radius: 12px; background: #fffafa; }
+.failed-call-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.failed-call h3 { margin: 0; font-size: 1rem; }
+.failed-call-url { margin: 8px 0 20px; color: #667085; font: .8rem/1.5 "Cascadia Code", Consolas, monospace; overflow-wrap: anywhere; }
+.failed-call dl { display: grid; grid-template-columns: minmax(110px, .3fr) 1fr; gap: 10px 16px; margin: 0; }
+.failed-call dt { color: #667085; font-size: .82rem; font-weight: 700; }
+.failed-call dd { margin: 0; color: #344054; line-height: 1.5; }
 @media (max-width: 620px) {
   .page-shell { width: min(100% - 22px, 960px); padding-top: 32px; }
   .form-grid { grid-template-columns: 1fr; }
   .section-heading { flex-direction: column; }
+  .failed-call-heading { align-items: flex-start; flex-direction: column; }
+  .failed-call dl { grid-template-columns: 1fr; gap: 4px; }
+  .failed-call dd { margin-bottom: 10px; }
 }

@@ -15,7 +15,13 @@
         <p class="intro">Search room availability and inspect the response from the PRE Directa service.</p>
       </header>
 
-      <section class="card">
+      <nav class="tabs" aria-label="Application sections">
+        <button class="tab-button is-active" type="button" data-tab="search-tab" aria-selected="true">API search</button>
+        <button class="tab-button" type="button" data-tab="failed-calls-tab" aria-selected="false">Failed calls</button>
+      </nav>
+
+      <section id="search-tab" class="tab-panel is-active" role="tabpanel">
+        <section class="card">
         <form id="availability-form">
           <div class="section-heading">
             <div>
@@ -61,21 +67,34 @@
 
           <button id="search-button" type="submit">Search availability</button>
         </form>
+        </section>
+
+        <section class="card response-card">
+          <div class="section-heading">
+            <div>
+              <h2>API response</h2>
+              <p id="response-summary">The response will appear here after a search.</p>
+            </div>
+            <button id="copy-button" class="secondary-button" type="button" disabled>Copy response JSON</button>
+          </div>
+          <pre id="response-output" class="response-output" aria-live="polite"><code>Waiting for a request...</code></pre>
+          <div class="request-preview">
+            <h3>Request body</h3>
+            <pre id="request-output" class="response-output"><code>No request sent yet.</code></pre>
+          </div>
+        </section>
       </section>
 
-      <section class="card response-card">
-        <div class="section-heading">
-          <div>
-            <h2>API response</h2>
-            <p id="response-summary">The response will appear here after a search.</p>
+      <section id="failed-calls-tab" class="tab-panel" role="tabpanel" hidden>
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Failed calls</h2>
+              <p>Keep a record of endpoints that do not work from the published website and the reason identified.</p>
+            </div>
           </div>
-          <button id="copy-button" class="secondary-button" type="button" disabled>Copy response JSON</button>
-        </div>
-        <pre id="response-output" class="response-output" aria-live="polite"><code>Waiting for a request...</code></pre>
-        <div class="request-preview">
-          <h3>Request body</h3>
-          <pre id="request-output" class="response-output"><code>No request sent yet.</code></pre>
-        </div>
+          <div id="failed-calls-list" class="failed-calls-list"></div>
+        </section>
       </section>
     </main>
   </body>
